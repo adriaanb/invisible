@@ -1,4 +1,9 @@
 <div id="sidebar">
+   {% if site.sidebar_image %}
+    <a href="{{ "/" | relative_url }}">
+      <img src="{{ site.sidebar_image | relative_url }}" alt="Sidebar Image" class="sidebar-image" />
+    </a>
+  {% endif %}
   <header>
     <{% if page.layout == "index" %}h1{% else %}div{% endif %} class="site-title">
       <a href="{{ "/" | relative_url }}">
@@ -16,6 +21,19 @@
     <span class="site-version">Currently v{{ site.version }}</span>
   {% endif %}
 
+  {% comment %}
   {% include sidebar-icon-links.html %}
   {% include copyright.html %}
+  {% endcomment %}
 </div>
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+        var siteTitleLink = document.querySelector('.site-title a'); // Target the anchor tag inside .site-title
+        if (siteTitleLink) {
+            var html = siteTitleLink.innerHTML;
+            var updatedHtml = html.replace(/(in)/ig, '<span class="invisible">$1</span>');
+            siteTitleLink.innerHTML = updatedHtml;
+        }
+    });
+</script>

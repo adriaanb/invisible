@@ -3,11 +3,12 @@ markdown:         kramdown
 highlighter:      rouge
 
 # Setup
-title:            Hydeout
-tagline:          'A Jekyll theme'
-description:      'The <a href="http://hyde.getpoole.com" target="_blank">Hyde</a> theme for <a href="http://jekyllrb.com" target="_blank">Jekyll</a>, refreshed.'
-url:              https://fongandrew.github.io
-baseurl:          '/hydeout'
+sidebar_image:    /assets/256px_300ms.gif
+title:            Invisible Codes
+tagline:          'Making The Invisible Visible'
+description:      'Making The Invisible Visible: Uncover your digital footprint, personal boundaries, and reclaim digital agency.'
+url:              https://github.com/adriaanb/invisible            ### TODO
+baseurl:          '/invisible'
                   # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
                   # If you want to move just the blog index pages but keep
@@ -15,17 +16,17 @@ baseurl:          '/hydeout'
                   # sidebar_blog_link below.
 
 author:
-  name:           'Andrew Fong'
-  url:            https://twitter.com/fongandrewc
+  name:           'Adriaan Bernstein'
+  url:            https://bernstein.design
 
-paginate:         5
+# paginate:         5
 # paginate_path:    '/page:num'
                     # Or '/blog/page:num' if you want to move your index pages
 
-plugins:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
+# plugins:
+#  - jekyll-feed
+#  - jekyll-gist
+#  - jekyll-paginate
 
 # Sidebar link settings
 sidebar_home_link:  true
