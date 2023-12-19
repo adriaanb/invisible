@@ -8,7 +8,7 @@ title:            Invisible Codes
 tagline:          'Making The Invisible Visible'
 description:      'Making The Invisible Visible: Uncover your digital footprint, personal boundaries, and reclaim digital agency.'
 url:              https://github.com/adriaanb/invisible            ### TODO
-baseurl:          /invisible
+baseurl:          '/invisible'
                   # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
                   # If you want to move just the blog index pages but keep
