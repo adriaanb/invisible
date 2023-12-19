@@ -1,0 +1,61 @@
+{
+  "upcomingEvents": [
+    {
+      "date": "01 - 19 Nov. 2023",
+      "title": "Reclaiming Digital Agency",
+      "collaboration": "IMPAKT x Fotodok/Casco",
+      "location": "Utrecht, The Netherlands",
+      "url": "#"
+    }
+  ],
+  "pastEvents": [
+    {
+      "title": "PublicSpaces",
+      "location": "Amsterdam, NL",
+      "year": "2023",
+      "url": "#"
+    },
+    {
+      "title": "RE:PUBLICA",
+      "location": "Berlin, DE",
+      "year": "2022",
+      "url": "#"
+    },
+    {
+      "title": "CPDP",
+      "location": "Brussels, BE",
+      "year": "2022",
+      "url": "#"
+    },
+    {
+      "title": "Bits of Freedom x IMPAKT",
+      "location": "Utrecht, NL",
+      "year": "2022",
+      "url": "#"
+    },
+    {
+      "title": "CODE Hackathon",
+      "location": "Online",
+      "year": "2022",
+      "url": "#"
+    },
+    {
+      "title": "Manifestations @ Dutch Design Week",
+      "location": "Eindhoven, NL",
+      "year": "2021",
+      "url": "#"
+    },
+    {
+      "title": "Impakt Festival",
+      "location": "Utrecht, NL",
+      "year": "2021",
+      "url": "#"
+    },
+    {
+      "title": "Utrecht Garden @ Ars Electronica",
+      "location": "Online",
+      "year": "2021",
+      "url": "#"
+    }
+  ]
+}

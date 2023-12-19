@@ -31,7 +31,7 @@ $heading-spacing: 0.5rem !default;
 $section-spacing: 2rem !default;
 $sidebar-width: 18rem !default;
 
-$large-breakpoint: 49rem !default;
+$large-breakpoint: 60rem !default;
 $large-font-size: 1.25rem !default;
 
 $box-shadow-size: 1px !default;
@@ -43,11 +43,22 @@ $code-color: #bf616a !default;
 
 // Hyde theming
 $sidebar-bg-color: #202020 !default;
+$sidebar-bg-image: linear-gradient(to bottom, lighten($sidebar-bg-color, 7%), darken($sidebar-bg-color, 7%)) !default;
 $sidebar-fg-color: #fff !default;
 $sidebar-sticky: true !default;
 $layout-reverse: false !default;
+$sidebar-spacing-vert: 0 !default;
+$sidebar-spacing-horiz: 0 !default;
+$sidebar-img-width: 256px !default;
 
 $sidebar-title-color: $sidebar-fg-color !default;
 $sidebar-link-color: $sidebar-fg-color !default;
 $sidebar-text-color: rgba($sidebar-fg-color, 0.75) !default;
 $sidebar-icon-color: rgba($sidebar-fg-color, 0.85) !default;
+
+$container-max-width: 48rem !default;
+
+$title-font-weight: normal !default;
+$title-text-transform: none !default;
+$title-alignment: left !default;
+$sidebar-img-margins: 0 0 1rem !default;

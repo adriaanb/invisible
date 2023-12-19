@@ -1,0 +1,73 @@
+/* IBM Plex Mono */
+@font-face {
+    font-family: 'IBMPlexMono';
+    src: url('woff2/IBMPlexMono-Regular.woff2') format('woff2'),
+         url('woff/IBMPlexMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBMPlexMono';
+    src: url('woff2/IBMPlexMono-Medium.woff2') format('woff2'),
+         url('woff/IBMPlexMono-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBMPlexMono';
+    src: url('woff2/IBMPlexMono-SemiBold.woff2') format('woff2'),
+         url('woff/IBMPlexMono-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBMPlexMono';
+    src: url('woff2/IBMPlexMono-Bold.woff2') format('woff2'),
+         url('woff/IBMPlexMono-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* IBM Plex Sans */
+@font-face {
+    font-family: 'IBMPlexSans';
+    src: url('woff2/IBMPlexSans-Regular.woff2') format('woff2'),
+         url('woff/IBMPlexSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBMPlexSans';
+    src: url('woff2/IBMPlexSans-Medium.woff2') format('woff2'),
+         url('woff/IBMPlexSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBMPlexSans';
+    src: url('woff2/IBMPlexSans-SemiBold.woff2') format('woff2'),
+         url('woff/IBMPlexSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IBMPlexSans';
+    src: url('woff2/IBMPlexSans-Bold.woff2') format('woff2'),
+         url('woff/IBMPlexSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

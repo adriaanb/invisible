@@ -25,11 +25,18 @@
 body {
   background-attachment: fixed;
   background-color: $sidebar-bg-color;
-  background-image: linear-gradient(to bottom, lighten($sidebar-bg-color, 7%), darken($sidebar-bg-color, 7%));
+  background-image: $sidebar-bg-image;
   color: $sidebar-text-color;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.sidebar-image {
+  display: none;
+  border-radius: 0;
+  width: $sidebar-img-width;
+  margin: $sidebar-img-margins;
 }
 
 #sidebar {
@@ -37,12 +44,27 @@ body {
   padding: $section-spacing;
 
   .site-title {
-    font-family: 'Abril Fatface', serif;
+    text-align: $title-alignment;
     font-size: $large-font-size;
-    font-weight: normal;
+    font-weight: $title-font-weight;
+    text-transform: $title-text-transform;
     margin-bottom: $heading-spacing;
     margin-top: 0;
   }
+
+.site-title span.invisible {
+    color: transparent;               /* Makes the text fill transparent */
+    -webkit-text-stroke: 1.2px black;  /* Outline for webkit browsers (Safari, Chrome) */
+    text-stroke: 1.2px black;          /* Future-proofing but not widely supported as of last update */
+    opacity: 40%;
+}
+
+.site-title:hover span.invisible {
+    color: black;                    /* Makes the text fill black */
+    -webkit-text-stroke: 0;          /* Removes the outline for webkit browsers */
+    text-stroke: 0;                  /* Future-proofing but not widely supported as of last update */
+    opacity: 100%;
+}
 
   .site-title .back-arrow { margin-right: 0.5rem; }
 }
@@ -149,6 +171,10 @@ body {
 
   /* Undo mobile CSS */
 
+  .sidebar-image {
+    display: block;
+  }
+
   #sidebar,
   .home #sidebar {
     text-align: left;
@@ -164,20 +190,20 @@ body {
 
     // Attach to bottom or top of window
     @if $sidebar-sticky {
-      bottom: 0;
+      bottom: $sidebar-spacing-vert;
     }
 
     @else {
-      top: 0;
+      top: $sidebar-spacing-vert;
     }
 
     // Attach to right or left of window
     @if $layout-reverse {
-      right: 0;
+      right: $sidebar-spacing-horiz;
     }
 
     @else {
-      left: 0;
+      left: $sidebar-spacing-horiz;
     }
 
     .site-title {
@@ -199,6 +225,7 @@ body {
 
   // Make entire container background white to contrast against sidebar
   .container {
+    // align-items: center;
     background: $body-bg;
     color: $body-color;
     min-height: 100vh;
@@ -230,7 +257,8 @@ body {
     }
 
     > * {
-      max-width: 38rem;
+      max-width: $container-max-width;
+      width: 100%;
       padding: 0;
     }
   }
@@ -264,7 +292,9 @@ body {
 }
 
 #sidebar a.active {
-  font-weight: bold;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: none;
 }
 
 #sidebar .site-title {
@@ -278,6 +308,11 @@ body {
 
 #sidebar-nav-links {
   flex-flow: column nowrap;
+
+  font-family: IBMPlexMono;
+  text-transform: lowercase;
+  font-weight: 400;
+  font-style: italic;
 }
 
 #sidebar-icon-links {
