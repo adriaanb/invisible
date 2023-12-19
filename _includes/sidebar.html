@@ -29,11 +29,11 @@
 
 <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function () {
-        var siteTitle = document.querySelector('.site-title');
-        if (siteTitle) {
-            var html = siteTitle.innerHTML;
+        var siteTitleLink = document.querySelector('.site-title a'); // Target the anchor tag inside .site-title
+        if (siteTitleLink) {
+            var html = siteTitleLink.innerHTML;
             var updatedHtml = html.replace(/(in)/ig, '<span class="invisible">$1</span>');
-            siteTitle.innerHTML = updatedHtml;
+            siteTitleLink.innerHTML = updatedHtml;
         }
     });
 </script>
