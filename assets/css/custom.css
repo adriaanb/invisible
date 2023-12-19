@@ -1,0 +1,136 @@
+/************ CSS For Marquees ************/
+/******************************************/
+
+.marquee {
+  font-family: IBMPlexMono;
+	color: #fefefe;
+	background-color: #1A1F24;
+	height: 1.7rem;
+	overflow: hidden;
+  position: fixed; /* relative */
+  left: 0; /**/
+  z-index: 99; /**/
+  bottom: 0; /**/
+  width: 100vw;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.upcoming {
+ background-color: #efefef;
+ color: #1A1F24;
+}
+
+/* UPCOMING EVENT/S */
+.marquee:first-of-type {
+ top: 0;
+}
+
+.track {
+ height: 100%;
+ overflow: hidden;
+ position: absolute;
+ white-space: nowrap;
+}
+
+.events {
+ display: inline-block;
+ will-change: transform;
+}
+
+.past .events > *{
+ margin-right: 40px;
+}
+
+.marquee a {
+ color: inherit;
+ text-decoration: none;
+}
+.marquee a:hover {
+ text-decoration: underline;
+}
+
+.year {
+ font-size: 14px;
+ margin-left: 5px;
+}
+
+.location {
+ font-weight: 400;
+}
+
+.upcoming .events {
+ animation: marquee-upcoming 60s linear infinite;
+}
+
+.past .events {
+ animation: marquee-past 80s linear infinite;
+}
+
+@keyframes marquee-upcoming {
+ 0% { transform: translateX(0%); }
+ 100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-past {
+ 0% { transform: translateX(0%); }
+ 100% { transform: translateX(-50%); }
+}
+
+
+/************ CSS For Carousel ************/
+/******************************************/
+
+
+.img-container {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+  padding-bottom: 56.25%; /* Assuming 16:9 aspect ratio. Adjust if needed. */
+  height: 0;
+}
+
+.img-container img {
+	position: absolute;
+	object-fit: cover;
+	object-position: center;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.img-container img.next {
+	opacity: 1;
+	z-index: 1;
+}
+
+.img-container img.prev {
+	opacity: 1;
+	z-index: 2;
+}
+
+.img-container img.fade-out {
+	opacity: 0;
+	transition: visibility 0s .5s, opacity .5s linear;
+	visibility: hidden;
+}
+
+.iframe-container {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+ padding-bottom: 62.5%; /* 16:10 Aspect Ratio */
+}
+
+.iframe-container iframe {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ border: none;
+ margin-top: 20px; /* Adjust as necessary for the desired spacing */
+}

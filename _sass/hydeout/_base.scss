@@ -48,6 +48,16 @@ a {
   }
 }
 
+p a {
+  text-decoration: underline;
+  font-weight: 500;
+
+  &:hover,
+  &:focus {
+    font-style: italic;
+  }
+}
+
 img {
   border-radius: 5px;
   display: block;

@@ -3,4 +3,32 @@
 # only main files contain this front matter, not partials.
 ---
 
+
+$root-font-family: IBMPlexSans;
+$pfont-size-lead: 1rem;
+$pfont-weight-lead: 400;
+$pfont-style: italic;
+
+$site-title-font-style: normal;
+$heading-font-style: italic;
+$heading-font-family: IBMPlexMono;
+$heading-color: #303030;
+
+$link-color: black;
+$body-color: #303030;
+$body-bg: white;
+$body-strong-color: black; // #303030;
+$sidebar-bg-color: #e0de12;
+$sidebar-fg-color: #000; 
+$sidebar-bg-image: none;
+$sidebar-width: 22rem;
+$large-breakpoint: 66rem;
+$sidebar-spacing-vert: 2rem; //same as $section-spacing
+$sidebar-spacing-horiz: 0; // 0.5rem;
+$sidebar-sticky: false; //content at top
+$sidebar-img-width: 195px;
+$title-font-weight: 600;
+$title-text-transform: uppercase;
+$title-alignment: center;
+$sidebar-img-margins: 0 auto 0.8rem;
 @import "hydeout";

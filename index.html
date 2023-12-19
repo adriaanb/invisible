@@ -1,4 +1,147 @@
 ---
-layout: index
-title: Home
+layout: page
 ---
+
+<link rel="stylesheet" href="assets/css/custom.css">
+<style>
+  .container > * {
+    max-width: 100%; /* override content max width for this page only */
+}
+</style>
+
+<!-- Upcoming Events -->
+<div class="marquee upcoming">
+    <div class="track">
+        <span class="events">
+            <!-- Upcoming events will be inserted here -->
+        </span>
+    </div>
+</div>
+
+<!-- Past Events -->
+<div class="marquee past">
+    <div class="track">
+        <span class="events">
+            <!-- Past events will be inserted here -->
+        </span>
+    </div>
+</div>
+
+<div class="img-container" data-slideshow>
+  <img src="assets/slider/0.jpg">
+  <img src="assets/slider/1.jpg">
+  <img src="assets/slider/2.jpg">
+  <img src="assets/slider/3.jpg">
+</div>
+
+<div class="iframe-container" id="iframe-placeholder">
+    <!-- Placeholder for vimeo iframe -->
+</div>
+
+<script>
+  /******* JAVASCRIPT FOR MARQUEE POPULATION *******/
+  document.addEventListener('DOMContentLoaded', function() {
+  const upcomingRepetitions = 8; // Set the number of repetitions for upcoming events
+  const pastRepetitions = 4; // Set the number of repetitions for past events
+
+  fetch('events.json')
+  .then(response => response.json())
+  .then(data => {
+      const upcomingEventsContainer = document.querySelector('.upcoming .track .events');
+      const pastEventsContainer = document.querySelector('.past .track .events');
+      let upcomingContent = '';
+      let pastContent = '';
+
+      // Generate upcoming events content
+      if (data.upcomingEvents.length > 0) {
+        data.upcomingEvents.forEach(event => {
+          upcomingContent += `<a href="${event.url}">${event.date} – ${event.title} – ${event.collaboration} – ${event.location} – </a>`;
+      });
+
+        // Repeat upcoming events content based on repetitions variable
+        upcomingContent = upcomingContent.repeat(upcomingRepetitions);
+    } else {
+        // Hide the upcoming events marquee
+        document.querySelector('.marquee.upcoming').style.display = 'none';
+    }
+
+      // Generate past events content
+    data.pastEvents.forEach(event => {
+        pastContent += `<a href="${event.url}">${event.title} <span class="location">(${event.location})</span><span class="year">${event.year}</span></a>`;
+    });
+
+      // Repeat past events content based on repetitions variable
+    pastContent = pastContent.repeat(pastRepetitions);
+
+      // Set innerHTML with the repeated content
+    upcomingEventsContainer.innerHTML = upcomingContent;
+    pastEventsContainer.innerHTML = pastContent;
+})
+  .catch(error => console.error('Error loading events:', error));
+});
+
+  /******* JAVASCRIPT FOR CAROUSEL *******/
+  class Slideshow {
+
+    constructor(container) {
+      this.container = container;
+      this.slides = Array.from(this.container.querySelectorAll('img'));
+      this.slides.forEach((slide, idx) => slide.setAttribute('data-slide', idx));
+      this.initSlideshow();
+  }
+
+  initSlideshow() {
+      this.imagesLoaded = 0;
+      this.currentIndex = 0;
+      this.setNextSlide();
+      this.slides.forEach((slide) => {
+        const img = new Image();
+        img.onload = () => this.loadImage();
+        img.src = slide.getAttribute('src');
+    });
+  }
+
+  loadImage() {
+      this.imagesLoaded++;
+      if (this.imagesLoaded >= this.slides.length) this.playSlideshow();
+  }
+
+  playSlideshow() {
+      this.slideshow = setInterval(() => this.performSlide(), 3500);
+  }
+
+  performSlide() {
+      if (this.prevSlide) this.prevSlide.classList.remove('prev', 'fade-out');
+      this.nextSlide.classList.remove('next');
+      this.prevSlide = this.nextSlide;
+      this.prevSlide.classList.add('prev');
+      this.currentIndex++;
+      if (this.currentIndex >= this.slides.length) this.currentIndex = 0;
+      this.setNextSlide();
+      this.prevSlide.classList.add('fade-out');
+  }
+
+  setNextSlide() {
+      this.nextSlide = this.container.querySelector(`[data-slide="${this.currentIndex}"]`);
+      this.nextSlide.classList.add('next');
+  }
+
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    new Slideshow(document.querySelector('[data-slideshow]'));
+});
+
+window.onload = function() {
+        // This function will run after the entire page has loaded
+    var iframeContainer = document.getElementById('iframe-placeholder');
+
+    var iframe = document.createElement('iframe');
+    iframe.title = "vimeo-player";
+    iframe.src = "https://player.vimeo.com/video/618040247?h=0d063cafd3";
+    iframe.setAttribute("allowfullscreen", "");
+
+    iframeContainer.appendChild(iframe);
+};
+
+</script>
