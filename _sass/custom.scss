@@ -187,3 +187,64 @@
  border: none;
  margin-top: 20px; /* Adjust as necessary for the desired spacing */
 }
+
+
+/************ CSS Image Gallery ***********/
+/******************************************/
+
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.responsive-image {
+  width: 100%;
+  max-width: calc(50% - 8px);
+  height: auto;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-right: 5px; /* Right margin */
+  margin-bottom: 5px; /* Bottom margin */
+  object-fit: cover;
+}
+.image-container :nth-child(even) { /* Remove right margin for even images */
+  margin-right: 0;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%; /* Max width */
+  max-height: 80vh; /* Max height */
+}
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #000000;
+  font-size: 40px;
+  font-weight: 600;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .image-container {
+      flex-direction: column;
+  }
+  .responsive-image {
+    max-width: 100%;
+    margin-right: 0; /* Remove right margin for small screens */
+  }
+}
