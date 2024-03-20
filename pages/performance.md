@@ -15,4 +15,4 @@ We aim to make an impact at public conferences, fairs, and festivals. By perform
 During our interventions, unsuspecting attendees are drawn in by the offer of a free gift, a seemingly innocent gesture. By accepting, they unknowingly consent to become "quantified entities." As they move through the event, a network of volunteers discreetly observes and tracks their activities, mirroring the pervasive surveillance of the digital realm. Absorbed in the event, participants remain unaware of this data collection until a revealing encounter with a tracking volunteer exposes the depth of intimate knowledge gathered. This revelation is intended to provoke discomfort, challenging participants to confront unsettling truths and misconceptions about privacy. 
 
 Our ultimate goal is to foster a critical view of personal data sharing and encourage the reclamation of digital sovereignty and agency.
-Want us to perform at your event? Contact us!
+Want us to perform at your event? [Contact us!](mailto:theinvisiblevisible@protonmail.com)
